@@ -8,11 +8,10 @@ const entries = await contentfulClient.getEntries<BlogPost>({
 });
 
 const posts = entries.items.map((item) => {
-	const { title, date, description, slug } = item.fields;
+	const { title, date, content } = item.fields;
 	return {
 		title,
-		slug,
-		description,
+		content,
 		date: new Date(date).toLocaleDateString(),
 	};
 });
@@ -24,13 +23,11 @@ const posts = entries.items.map((item) => {
 		{
 			posts.map((post) => (
 				<ul class="">
-					<a class="" href={`/blog/${post.slug}/`}>
-						<h2 class="text-2xl underline">{post.title}</h2>
-					</a>
+					<h2 class="text-2xl underline">{post.title}</h2>
 					<time class="bg-blue-200 text-blue-800 rounded-full px-2 pt-0.5 pb-1 text-sm font-bold">
 						{post.date}
 					</time>
-					<p>{post.description}</p>
+					<p>{post.content}</p>
 				</ul>
 			))
 		}
