@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { contentfulClient } from "../lib/contentful";
-import type { BlogPost } from "../lib/contentful";
+import type { BlogPost } from "../lib/contentful";  
 
 const entries = await contentfulClient.getEntries<BlogPost>({
 	content_type: "post",
@@ -12,14 +12,14 @@ const posts = entries.items.map((item) => {
 	return {
 		title,
 		content,
-		date: new Date(date).toLocaleDateString(),
+		date,
 	};
 });
 ---
 
 <Layout title="WhatFor">
 	<main class="space-y-3 mx-auto max-w-lg">
-		<h1 class="text-4xl">CW Blog</h1>
+		<h1 class="text-4xl">CY_blog</h1>
 		{
 			posts.map((post) => (
 				<ul class="">
