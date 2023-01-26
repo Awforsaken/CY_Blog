@@ -4,7 +4,7 @@ import { contentfulClient } from "../lib/contentful";
 import type { BlogPost } from "../lib/contentful";
 
 const entries = await contentfulClient.getEntries<BlogPost>({
-	content_type: "blogPost",
+	content_type: "post",
 });
 
 const posts = entries.items.map((item) => {
