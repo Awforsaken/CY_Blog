@@ -18,14 +18,14 @@ const posts = entries.items.map((item) => {
 });
 ---
 
-<Layout title="WhatFor">
-	<main class="space-y-4 mx-auto max-w-lg">
-		<h1 class="text-4xl crt font-bold">CY_blog</h1>
+<Layout title="CY_blog">
+	<main class="space-y-4  mx-auto max-w-3xl mx-4">
+		<h1 class="text-5xl crt font-bold text-center">CY_blog</h1>
 		{
 			posts.map((post) => (
 				<ul data-augmented-ui="both tr-clip bl-clip " class="p-8">
 					<h2 class="text-2xl underline">{post.title}</h2>
-					<time class="bg-amber-600 px-2 pt-0.5 pb-1 text-sm ">
+					<time class="bg-amber-600 px-2 pt-1 pb-1 text-sm rounded-lg">
 						{post.date}
 					</time>
 					<p>{post.content}</p>
