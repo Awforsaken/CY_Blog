@@ -8,6 +8,7 @@ export interface BlogPost {
   content: Document;
   slug: string;
   tagging:string;
+  tags:array;
 }
 
 export const contentfulClient = contentful.createClient({

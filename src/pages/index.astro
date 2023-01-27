@@ -23,15 +23,17 @@ const posts = entries.items.map((item) => {
 		<h1 class="text-5xl crt font-bold text-center">CY_blog</h1>
 		{
 			posts.map((post) => (
-				<ul data-augmented-ui="inlay tr-clip bl-clip " class="p-8 mx-4">
-					<div>
+				<ul data-augmented-ui="inlay tl-2-clip-x br-2-clip-x tr-clip bl-clip" class="p-8 mx-4">
 						<h2 class="text-2xl underline inline-block">{post.title}</h2>
-					<time class="bg-amber-600 px-2 pt-1 pb-1 text-sm rounded-lg float-right">
+
+					<p>{post.content}</p>
+					
+					<div class="bg-yellow-400 px-2 pt-1 pb-1 text-sm rounded-lg px-2 p-1 pr-4 display-block">
+						{post.tagging}
+					</div>
+					<time class=" text-sm text-sky-700 display-block">
 						{post.date}
 					</time>
-				</div>
-					<p>{post.content}</p>
-					<div class="bg-yellow-400 px-2 p-1 pr-4 ">{post.tagging}</div>
 				</ul>
 			))
 		}
