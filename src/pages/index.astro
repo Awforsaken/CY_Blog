@@ -23,9 +23,9 @@ const posts = entries.items.map((item) => {
 		<h1 class="text-5xl crt font-bold text-center">CY_blog</h1>
 		{
 			posts.map((post) => (
-				<ul data-augmented-ui="both tr-clip bl-clip " class="p-8">
+				<ul data-augmented-ui="inlay tr-clip bl-clip " class="p-8">
 					<h2 class="text-2xl underline">{post.title}</h2>
-					<time class="bg-amber-600 px-2 pt-1 pb-1 text-sm rounded-lg">
+					<time class="bg-amber-600 px-2 pt-1 pb-1 text-sm rounded-lg float-right">
 						{post.date}
 					</time>
 					<p>{post.content}</p>
