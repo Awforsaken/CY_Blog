@@ -8,21 +8,22 @@ const entries = await contentfulClient.getEntries<BlogPost>({
 });
 
 const posts = entries.items.map((item) => {
-	const { title, date, content } = item.fields;
+	const { title, date, content,tagging, } = item.fields;
 	return {
 		title,
 		content,
 		date,
+		tagging,
 	};
 });
 ---
 
 <Layout title="WhatFor">
 	<main class="space-y-3 mx-auto max-w-lg">
-		<h1 class="text-4xl">CY_blog</h1>
+		<h1 class="text-4xl crt">CY_blog</h1>
 		{
 			posts.map((post) => (
-				<ul class="">
+				<ul data-augmented-ui="both tr-clip bl-clip" class="">
 					<h2 class="text-2xl underline">{post.title}</h2>
 					<time class="bg-blue-200 text-blue-800 rounded-full px-2 pt-0.5 pb-1 text-sm font-bold">
 						{post.date}
