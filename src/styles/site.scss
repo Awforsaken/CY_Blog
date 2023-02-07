@@ -1,16 +1,45 @@
 
 html {
-    font-family: 'Exo 2', sans-serif;
+    font-family: "Rajdhani",'Exo 2', sans-serif;
     background-color: black;
-    color: rgb(255 200 255 / 0.8);
+    //color: rgb(255 200 255 / 0.8);
+    color: rgba(255, 214, 0, 1.00);
+    
     text-shadow: 0 0 5px rebeccapurple;
 
 }
 
+body {
+    background: linear-gradient(183deg, rgba(141,35,46,0.5) 1%, rgba(141,35,46,0) 60%), 
+                linear-gradient(250deg, rgba(141,35,46,0) 21%, rgba(141,35,46,0.2) 20%, rgba(11,35,47,0.2) 50%),
+                linear-gradient(250deg, rgba(141,35,46,0) 23%, rgba(141,35,46,0.2) 20%, rgba(11,35,47,0.2) 50%),
+                linear-gradient(250deg, rgba(141,35,46,0) 25%, rgba(141,35,46,0.2) 20%, rgba(11,35,47,0.2) 50%),
+                repeating-linear-gradient(179deg, rgba(255,255,255,0.1), rgba(255,255,255,0.1) 3px, rgba(0,0,0,0.1) 3px, rgba(0,0,0,0.1) 5px);;
+   
+    background-color: #0b232f;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  
+
+.background{
+ background-image:linear-gradient(90deg, rgba(252,25,154,.1) 1px, rgba(0,0,0,0) 1px);
+  background-position:bottom;
+  background-repeat:repeat;
+  background-size:40px 10px;
+  left: -25px;
+  position: absolute;
+  pointer-events: none;
+  bottom: 0;
+  transform: perspective(100px) rotateX(60deg);
+  z-index: 0;
+}
 
 
 code {
     font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono;
+
+    
 
 }
 
@@ -32,7 +61,7 @@ code {
 
 
 .time-stamp{
-    font-family: monospace;   
+    font-family: 'Liberation Mono', monospace; 
 
     --aug-tr1:6px;
     --aug-tl1:18px;
@@ -50,6 +79,10 @@ code {
 }
 
 .container{
+    transform: perspective(100px) rotateX(0.5deg);
+
+    --aug-border-opacity:1;
+
     --aug-tl1: 12px;
     --aug-tl2: 18px;
 
