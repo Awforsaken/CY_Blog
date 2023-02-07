@@ -29,14 +29,15 @@ const posts = entries.items.map((item) => {
 						<h2 class="text-2xl text-blue inline-block mb-2">{post.title}</h2>
 
 					<p class="mb-2">{post.content}</p>
-					
-					<div data-augmented-ui=" tr-clip br-clip" class=" mb-6 bg-black text-yellow-400 text-sm py-1 px-5 ">
+				</div>
+					<div data-augmented-ui=" br-clip both" class="mb-6 bg-teal-900 text-sm py-4 px-5 pr-8 text-pink bg-transparent">
 						{post.tagging}
 					</div>
-					<time data-augmented-ui=" tl-clip bl-clip tr-clip br-clip border" class="bg-cyan-500 crt text-black text-lg absolute top-1 right-1 pl-4 pr-2  time-stamp">
+
+					<time data-augmented-ui=" tl-clip bl-clip tr-clip br-clip border" class="bg-cyan-400 crt text-black text-lg absolute top-1 right-1 pl-4 pr-2  time-stamp">
 						{post.date}
 					</time>
-				</div>
+
 				</ul>
 			))
 		}
