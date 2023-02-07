@@ -20,20 +20,23 @@ const posts = entries.items.map((item) => {
 
 <Layout title="CY_blog">
 	<main class="space-y-4  mx-auto max-w-3xl ">
-		<h1 class="text-5xl crt font-bold text-center">CY_blog</h1>
+		<h1 class="text-5xl crt font-bold text-center text-blue">CY_blog</h1>
 		{
 			posts.map((post) => (
-				<ul data-augmented-ui="inlay tl-2-clip-x br-2-clip-x tr-clip bl-clip" class="p-8 mx-4">
-						<h2 class="text-2xl underline inline-block">{post.title}</h2>
+				<ul data-augmented-ui="tr-clip br-2-clip-x tr-clip bl-clip both l-clip-xy r-clip-y tl-2-clip-x " class="container">
 
-					<p>{post.content}</p>
+					<div class="glow-container pt-8 pb-2 px-5 card" data-augmented-ui="">
+						<h2 class="text-2xl text-blue inline-block mb-2">{post.title}</h2>
+
+					<p class="mb-2">{post.content}</p>
 					
-					<div data-augmented-ui="l-clip tr-clip br-clip" class="bg-black text-yellow-400 text-sm py-1 px-5">
+					<div data-augmented-ui=" tr-clip br-clip" class=" mb-6 bg-black text-yellow-400 text-sm py-1 px-5 ">
 						{post.tagging}
 					</div>
-					<time class=" text-sm text-sky-700 display-block">
+					<time data-augmented-ui=" tl-clip bl-clip tr-clip br-clip border" class="bg-cyan-500 crt text-black text-lg absolute top-1 right-1 pl-4 pr-2  time-stamp">
 						{post.date}
 					</time>
+				</div>
 				</ul>
 			))
 		}
